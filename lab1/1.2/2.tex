@@ -1,0 +1,49 @@
+\section{Решение}
+Обобщённая функция Лагранжа:
+\begin{gather}
+    L(x, \lambda_0, \lambda_1) = \lambda_0(x_1^2 - 4x_1 + 4 + x_2^2 - 6x_2 + 9 + x_1x_2)\nonumber
+\end{gather}
+
+Необходимые условия экстремума:
+\begin{gather}
+    \frac{\delta L(x, \lambda_0, \lambda_1)}{\delta x_i} = 0, i = 1 \ldots n \nonumber \\
+    \frac{\delta L(x, \lambda_0, \lambda_1)}{\delta x_1} = \lambda_0(2x_1 - 4 + x_2) + \lambda_1(2x_1) = 0 \nonumber \\
+    \frac{\delta L(x, \lambda_0, \lambda_1)}{\delta x_2} = \lambda_0(2x_1 - 4 + x_2) + \lambda_1(2x_1) = 0 \nonumber \\
+    \lambda_1(x_1^2 + x_2^2 - 52) = 0 \nonumber
+\end{gather}
+
+Пусть $\lambda_0 = 0$:
+\begin{gather}
+    2\lambda_1 x_1 = 0 \nonumber \\
+    2\lambda_1 x_2 = 0 \nonumber \\
+    x_1 = x_2 = 0 \nonumber
+\end{gather}
+
+Пусть $\lambda_1 = 1$:
+\begin{gather}
+    \lambda_1 = -\frac{\lambda_0(2x_2 - 6 + x_1)}{2x_2} \nonumber \\
+    6x_1 - 4x_2 - x_1^2 + x_2^2 = 0 \nonumber \\
+    x_2 = 2 \pm \sqrt{x_1^2 - 6x_1 + 4} \nonumber \\
+    x_1^2 - 3x_1 + 2 = 2(1 - x)\sqrt{x_1^2 - 6x_1 + 4}\nonumber \\
+    x_1 = 1, x_1 = \frac23, x_1 = 6 \nonumber \\
+    x_2 = 2\frac23 \nonumber
+\end{gather} 
+
+Получили две точки $x = [0, 0]$, $x = [\frac23, 2\frac23]$.
+
+Проверим достаточные условия первого порядка: 
+число ограничений-неравенств и число активных ограничений-неравенств совпадают и равны~$1$.
+$\lambda_1 \geq 0$ значит -- локальные минимумы.
+
+Проверим достаточные условия второго порядка:
+\begin{gather}
+    d^2L(x, \lambda_0, \lambda_1) = \lambda_0 + 2\lambda_0 + \lambda_1 + 2\lambda_0 + \lambda_1 + \lambda_0 \geq 0 \nonumber
+\end{gather} 
+
+$d^2L(x, \lambda_0, \lambda_1) \geq 0$ -- значит локальные минимумы.
+
+Высчитываем значения в точках $x = [0, 0]$, $x = [\frac23, 2\frac23]$:
+\begin{gather}
+    f(0, 0) = 4 + 9 + 0 = 13 \nonumber \\
+    f(\frac23, 2\frac23) = \frac{16}9 + \frac19 + \frac23\frac83=\frac{11}3 \nonumber
+\end{gather} 

@@ -1,0 +1,33 @@
+\section{Постановка задачи}
+    Даны дважды непрерывно дифференцируемые целевые функции, представленные в виде вектор-функции $F(x) = [f_1(x), f_2(x) \ldots f_l(x)]^T$ и функции ограничений $g_j(x) = 0, j=1 \ldots m$ и $g_j(x) \leq 0, j=m+1 \ldots p$, определяющие множество допустимых решений $X$.
+
+    Требуется найти недоминируемые (эффективные) на множестве $X$, т.е. такое множество решений $X^e \in X$, что
+
+    \begin{gather}
+    F(X^e) = \inf_{x \in X}[f_1(x), f_2(x) \ldots f_l(x)]^T \nonumber
+    \end{gather}
+    \begin{numcases}{}
+            g_j(x) = 0,    j = 1 \ldots m; m < n \nonumber \\
+            g_j(x) \leq 0, j = m + 1 \ldots p \nonumber
+    \end{numcases} \nonumber
+
+    Где $f(x), g(x)$:
+    \begin{gather}
+        f_1(x) = x_1^2 + x_2^2 \rightarrow min \nonumber \\
+        f_2(x) = 4(x_1 - 5)^2 + 2(x_2 - 6)^4 \rightarrow min \nonumber \\
+        g_1(x) = -x_1 + x_2 + 1 \leq 0 \nonumber \\
+        g_2(x) = x_1 + x_2 - 2 \leq 0 \nonumber 
+    \end{gather}
+
+\section{Код программы}
+    \lstinputlisting[language=Python]{lab.py}
+
+\section{Результат работы программы}
+    Для поиска безусловного минимума используется программа, написанная для лабораторной работы 2.2.
+
+    При $w = [0.70710678118654746, 0.70710678118654746]$ получена точка \\ $x = [1.5000000032155494, 0.50000017106720973]$.\\
+    Значение функций в этой точке:
+    \begin{gather}
+        f_1(x) = 2.5000001807138874 \nonumber \\ 
+        f_2(x) = 1879.1247722195185
+    \end{gather}.

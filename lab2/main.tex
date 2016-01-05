@@ -2,15 +2,15 @@
 
 \usepackage{ucs}
 \usepackage{amsmath}                    % gather* для вывода формул по центру страницы
-\usepackage[utf8x]{inputenc} 		% Включаем поддержку UTF8
-\usepackage[russian]{babel}  		% Включаем пакет для поддержки русского языка
+\usepackage[utf8x]{inputenc}        % Включаем поддержку UTF8
+\usepackage[russian]{babel}         % Включаем пакет для поддержки русского языка
 
 \usepackage[
-	left=2cm, 			% Поле левое : 200 мм
-	right=2cm, 			% Поле правое : 200 мм
-	top=2cm,			% Поле верхнее: 200 мм
-	bottom=2cm,			% Поле нижнее : 200 мм
-	bindingoffset=0cm]{geometry}
+    left=2cm,           % Поле левое : 200 мм
+    right=2cm,          % Поле правое : 200 мм
+    top=2cm,            % Поле верхнее: 200 мм
+    bottom=2cm,         % Поле нижнее : 200 мм
+    bindingoffset=0cm]{geometry}
 
 \setlength{\parindent}{1.25cm}          % Абзацный отступ: 1,25 см
 \usepackage{indentfirst}                % 1-й абзац имеет отступ
@@ -18,8 +18,8 @@
 \usepackage[pdftex]{graphicx, color}
 \usepackage{color}
 \usepackage{tikz}
-\usepackage{url}			% использование URL в библиографии
-\usepackage{listings}			% использование листингов кода
+\usepackage{url}            % использование URL в библиографии
+\usepackage{listings}           % использование листингов кода
 \usepackage[nooneline]{caption}
 \captionsetup[table]{justification=raggedleft}
 \captionsetup[figure]{justification=centering,labelsep=endash}
@@ -37,16 +37,16 @@
 
 % вставка листингов с кодом
 \lstset{inputencoding=utf8x,
-		extendedchars=false,
-		keepspaces=true,
-		language=c}
+        extendedchars=false,
+        keepspaces=true,
+        language=Python}
 
 \renewcommand{\lstlistingname}{Листинг}
 
-\setcounter{tocdepth}{4} 	% chapter, section, subsection, subsubsection и paragraph
+\setcounter{tocdepth}{4}    % chapter, section, subsection, subsubsection и paragraph
 \setcounter{secnumdepth}{4}
 
-\parindent=1,25cm				% красная строка = 1 см
+\parindent=1,25cm               % красная строка = 1 см
 \usepackage{enumitem}
 \setlist[enumerate,1]{leftmargin=2.25cm}
 \setlist[itemize]{leftmargin=2.25cm}
@@ -68,7 +68,7 @@
 
             \vfill
 
-            {\large\bf Методы оптимизации} \\
+            {\large\bf Численные методы поиска безусловного экстремума} \\
             \vfill
 
             \hfill\parbox{7cm} {
@@ -78,13 +78,15 @@
 
             \vspace{\fill}
 
-            29 Октября, \number\year
+            25 Декабря, \number\year
             \clearpage
     }
         \newpage
 
-        \include{1}
-        \include{2}
-        \include{3}
+        \include{2.1/main}
+        \newpage
+        \include{2.2/main}
+        \newpage
+        \include{solution}
         
 \end{document}

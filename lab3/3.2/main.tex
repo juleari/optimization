@@ -1,0 +1,29 @@
+\section{Метод модифицированных функций Лагранжа}
+    \subsection{Постановка задачи}
+        Даны дважды непрерывно дифференцируемые целевая функция $f(x)=f(x_1 \ldots x_n)$ и функции ограничений $g_j(x) = 0, j=1 \ldots m$ и $g_j(x) \leq 0, j=m+1 \ldots p$, определяющие множество допустимых решений $X$.
+
+        Требуется найти локальный минимум целевой функции на множестве $X$, т.е. такую точку $x^e \in X$, что
+
+        \begin{gather}
+        f(x^e) = \min_{x \in X}f(x) \nonumber
+        \end{gather}
+        \begin{numcases}{}
+                g_j(x) = 0,    j = 1 \ldots m; m < n \nonumber \\
+                g_j(x) \leq 0, j = m + 1 \ldots p \nonumber
+        \end{numcases} \nonumber
+
+        Где $f(x), g(x)$:
+        \begin{gather}
+            f(x) = x_1^2 + x_2^2 \rightarrow min \nonumber \\
+            g_1(x) = -x_1 + 1 \leq 0 \nonumber \\
+            g_2(x) = x_1 + x_2 - 2 \leq 0 \nonumber 
+        \end{gather}
+
+    \subsection{Код программы}
+        \lstinputlisting[language=Python]{3.2/lab.py}
+
+    \subsection{Результат работы программы}
+        Для поиска безусловного минимума используется программа, написанная для лабораторной работы 2.2.
+
+        В результате работы программы получена точка [1.0, 0.0].
+        Значение функции в этой точке: 1.0.
